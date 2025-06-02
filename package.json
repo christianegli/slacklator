@@ -1,0 +1,26 @@
+{
+  "name": "slacklator",
+  "version": "1.0.0",
+  "description": "Slack translation bot powered by DeepL",
+  "main": "app.js",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["slack", "translation", "deepl", "bot"],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "@slack/bolt": "^4.1.0",
+    "deepl-node": "^1.14.0",
+    "dotenv": "^16.4.5",
+    "node-cache": "^5.1.2",
+    "redis": "^4.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
