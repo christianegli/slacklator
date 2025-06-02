@@ -1,7 +1,7 @@
 // Load environment variables
 require('dotenv').config();
 
-// app.js - OptiQa Slack Auto-Translate App (DeepL Primary)
+// app.js - Slacklator - Smart AI-powered translation bot for Slack teams (DeepL Primary)
 const { App } = require('@slack/bolt');
 const deepl = require('deepl-node');
 const redis = require('redis');
@@ -926,7 +926,7 @@ app.shortcut('translate_message', async ({ shortcut, ack, client }) => {
     
     const msgLang = await detectLanguage(message.text);
     
-    // Translate to common OptiQa languages
+    // Translate to common languages
     const targetLangs = ['en', 'es', 'de', 'fr', 'it', 'pt'].filter(l => l !== msgLang);
     const translations = {};
     
@@ -1106,7 +1106,7 @@ app.command('/translate-help', async ({ command, ack, respond }) => {
         type: "header",
         text: {
           type: "plain_text",
-          text: "🌐 OptiQa Translate Help"
+          text: "🌐 Slacklator Help"
         }
       },
       {
@@ -1210,7 +1210,7 @@ if (process.env.RENDER) {
   }
   
   await app.start();
-  console.log('⚡️ OptiQa Translate is running with DeepL!');
+  console.log('⚡️ Slacklator is running with DeepL!');
   
   // Test DeepL connection
   try {
